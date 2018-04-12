@@ -1,0 +1,60 @@
+<ion-header>
+        <ion-navbar>
+            <ion-title>Add Recipe</ion-title>
+        </ion-navbar>
+    </ion-header>
+    
+    <ion-content padding>
+        <!-- add title -->
+        <ion-item>
+            <ion-label floating>Recipe Title</ion-label>
+            <ion-input [(ngModel)]="title" type="text"></ion-input>
+        </ion-item>
+        
+        <!-- add ingredients -->
+        <button ion-button *ngIf="!addAnotherInstruction" (click)="addAnotherIngredient = true">
+            <ion-icon name="add-circle"> Ingredient</ion-icon>
+        </button>
+        <div *ngIf="addAnotherIngredient">
+            <ion-item>
+                <ion-label floating>Ingredient</ion-label>
+                <ion-input clearOnEdit="true" [(ngModel)]="ingredient" type="text"></ion-input>
+            </ion-item>
+
+            <button ion-button (click)="addIngredient()">
+                <ion-icon name="add-circle"> Add</ion-icon>
+            </button>
+        </div>
+        
+        <!-- add instructions -->
+        <button ion-button *ngIf="!addAnotherIngredient" (click)="addAnotherInstruction = true">
+            <ion-icon name="add-circle"> Instruction</ion-icon>
+        </button>
+        <div *ngIf="addAnotherInstruction">
+            <ion-item>
+                <ion-label floating>Instruction</ion-label>
+                <ion-input [(ngModel)]="instruction" type="text"></ion-input>
+            </ion-item>
+
+            <button ion-button (click)="addInstruction()">
+                <ion-icon name="add-circle"> Add</ion-icon>
+            </button>
+        </div>
+        <!-- *ngFor ingredient in recipe.ingrediants; let i = index -->
+        <!-- ngModel = recipe.ingredients[i]; -->
+    
+        <!-- place instruction list here -->
+
+        <h2>{{ title }}</h2>
+        <h3>Ingredients:</h3>
+        <ul class="ingredients">
+            <li *ngFor="let ingredient of ingredients">{{ ingredient }}</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ul class="instructions">
+            <li *ngFor="let instruction of instructions">{{ instruction }}</li>
+        </ul>
+
+        <button ion-button color="primary" (click)="setRecipe()">Submit Recipe</button>
+
+    </ion-content>
