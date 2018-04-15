@@ -1,13 +1,2 @@
 page-home {
-    
-    ion-content {
-        // find image size that is 2800px X 2800px
-        background-image: url('../../assets/imgs/strawberry.jpg');
-        background-repeat: no-repeat;
-
-        @media only screen and(max-width: 420px) {
-            background-image: url('../../assets/imgs/strawberry-small.png');
-        }
-    }
-    
 }

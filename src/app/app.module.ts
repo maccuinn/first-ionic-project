@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 
 import { Recipes } from '../pages/recipes/recipes';
@@ -21,15 +22,15 @@ import { Storage } from '@ionic/storage';
   declarations: [
     MyApp,
     Recipes,
-    ContactPage,
     HomePage,
     AddRecipe,
     RecipeDetailsPage,
-    TabsPage
+    TabsPage,
   ],
 
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot({
       name: '__mydb',
@@ -41,7 +42,6 @@ import { Storage } from '@ionic/storage';
   entryComponents: [
     MyApp,
     Recipes,
-    ContactPage,
     HomePage,
     AddRecipe,
     RecipeDetailsPage,

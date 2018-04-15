@@ -7,6 +7,21 @@
 </ion-header>
 
 <ion-content padding>
-  <!-- list of recipes - see page 14 of angular inclass4 for how to link to 
-  details page -->
+  <ion-segment [(ngModel)]="selectedlist">
+    <ion-segment-button value="stored">Sample Recipes</ion-segment-button>
+    <ion-segment-button value="created">Your Recipes</ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="selectedlist">
+    <ion-list *ngSwitchCase="'created'">
+      <ion-item *ngFor="let recipe of recipes">{{ recipe.title }}
+          <button ion-button clear item-end (click)="openRecipeDetailsPage(recipe)">View</button>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'stored'">
+      <ion-item *ngFor="let sampleRecipe of sampleRecipes">{{ sampleRecipe.title }}
+          <button ion-button clear item-end (click)="openRecipeDetailsPage(sampleRecipe)">View</button>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

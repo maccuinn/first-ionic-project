@@ -1,0 +1,35 @@
+{
+    "recipes":
+    [
+        {
+            "title": "Scrambled Eggs",
+            "ingredients": ["2 Eggs"],
+            "instructions": ["Crack eggs in a bowl", 
+                            "Stir with fork or whisk", 
+                            "Pour into hot pan and wait for eggs to harden a little bit (about 30sec)", 
+                            "Flip in pan until eggs are cooked"]
+        },
+        {
+            "title": "Carrot Cake",
+            "ingredients": ["3 C All-purpose Flour",
+                            "2 C White Sugar",
+                            "2 1/2 Tsp Baking Soda",
+                            "2 1/2 Tsp Cinnamon",
+                            "1 Tsp Salt",
+                            "1/4 Tsp Nutmeg",
+                            "2 Cups Shredded Carrots",
+                            "1 1/4 C Veg Oil",
+                            "3 Eggs",
+                            "2 Tsp Vanilla Extract",
+                            "1 Tsp Grated Orange Zest"
+                            ],
+            "instructions": ["Preheat oven to 350 degrees F.",
+                            "Grease 9x13 inch baking dish",
+                            "Whisk dry ingredients in a bowl",
+                            "In another bowl, beat wet ingredients until smooth",
+                            "Pour batter in baking dish",
+                            "Bake until toothpick comes out clean, Apprx 40-50min"
+                            ]
+        }
+    ]
+}
